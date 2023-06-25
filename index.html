@@ -33,7 +33,10 @@
            // console.log(x[0]);
            x[0].style.width = "100%"; 
            x[0].style.height = "150px"; 
-           x[0].style.border = "5px solid #ddd"; 
+           x[0].style.border = "5px solid blue"; 
+           x[0].style.backgroundColor = 'gray';
+          
+
 
            var x = document.getElementsByTagName('header')
            
@@ -43,6 +46,7 @@
            x[0].style.fontSize= "3em";
            x[0].style.textAlign= "center";
            x[0].style.lineHeight= "150px";
+           
 
 
            let f = document.createElement('footer');
@@ -54,6 +58,8 @@
            document.body.appendChild(n);
 
             var aside1 = document.createElement('aside')
+
+
             aside1.innerHTML = 'Aside 1'
             var section = document.createElement('section')
             section.innerHTML = 'Section'
@@ -90,10 +96,12 @@
           ff.style.color = 'green';
           ff.style.fontSize= "3em";
           ff.style.border = '5px solid #333';
+          ff.style.backgroundColor = 'lightgray';
 
           var nav = document.querySelector('nav');
           nav.style.height = '300px';
           nav.style.border = '5px solid red';
+          nav.style.backgroundColor = 'silver';
 
         </script>
     </body>
