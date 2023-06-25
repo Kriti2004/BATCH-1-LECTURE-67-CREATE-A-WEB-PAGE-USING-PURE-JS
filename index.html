@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BATCH-1 LECTURE-67 Create a Web page Using pure JS</title>
+        <style>
+
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body id="body">
+        
+
+
+        <script>
+            // 1. Create a header element/tag using js
+           var h = document.createElement('header')
+           h.innerHTML='Header';
+           console.log(h)
+
+           // 2. Now tell the js to place this header element inside body tag
+           document.getElementById('body').appendChild(h);
+           // var x = document.querySelector('header')
+           document.querySelector('header').setAttribute('class','header')
+
+           // object.member
+           document.body.style.margin = '0px'
+
+           var x = document.getElementsByClassName('header');
+           // console.log(x[0]);
+           x[0].style.width = "100%"; 
+           x[0].style.height = "150px"; 
+           x[0].style.border = "5px solid #ddd"; 
+
+           var x = document.getElementsByTagName('header')
+           
+
+           // console.log(x[0]);
+           x[0].style.color= "green";
+           x[0].style.fontSize= "3em";
+           x[0].style.textAlign= "center";
+           x[0].style.lineHeight= "150px";
+
+
+           let f = document.createElement('footer');
+           f.innerHTML='Footer';
+           let n = document.createElement('nav');
+           console.log(n);
+           console.log(f);
+
+           document.body.appendChild(n);
+
+            var aside1 = document.createElement('aside')
+            aside1.innerHTML = 'Aside 1'
+            var section = document.createElement('section')
+            section.innerHTML = 'Section'
+            var aside2 = document.createElement('aside')
+            aside2.innerHTML = 'Aside 2'
+
+            document.body.appendChild(aside1)
+            document.body.appendChild(section)
+            document.body.appendChild(aside2)
+
+            //document.querySelectorAll('aside').style.display = 'inline-block';
+
+            var array = document.querySelectorAll('aside');
+            console.log(array);
+            array.forEach(function(currentvalue, index, array){
+                array[index].style.display = 'inline';
+            })
+            
+            document.querySelector('section').style.display = 'inline-block';
+
+
+           
+           document.body.appendChild(f);
+
+           var x = document.querySelectorAll('footer')
+          // console.log(x[0]);
+          x[0].setAttribute('data-foot', 'foot1') // element.setAttribute('attributeName', 'attributevalue');
+          document.querySelector('footer[data-foot="foot1"]').style.textAlign='center';
+          document.querySelector('footer[data-foot="foot1"]').style.color='green';
+          document.querySelector('footer[data-foot="foot1"]').style.lineHeight='150px';
+
+          var ff = document.querySelector('footer');
+          ff.style.width = '100%';
+          ff.style.color = 'green';
+          ff.style.border = '5px solid #333';
+
+        </script>
+    </body>
+</html>
